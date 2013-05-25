@@ -10,6 +10,7 @@
 
 @implementation BNRItem
 @synthesize itemName;
+@synthesize containedItem, container, serialNumber, valueInDollars, dateCreated;
 
 + (id)randomItem
 {
@@ -74,54 +75,6 @@
     }
     
     return self;
-}
-
-- (void)setSerialNumber:(NSString *)str
-{
-    serialNumber = str;
-}
-
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-
-- (void)setValueInDollars:(int)i
-{
-    valueInDollars = i;
-}
-
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return dateCreated;
-}
-
-- (void)setContainedItem:(BNRItem *)i
-{
-    containedItem = i;
-    // When given an item to contain, the contained
-    // item will be given a pointer to its container
-    [i setContainer:self];
-}
-
-- (BNRItem *)containedItem
-{
-    return containedItem;
-}
-
-- (void)setContainer:(BNRItem *)i
-{
-    container = i;
-}
-
-- (BNRItem *)container
-{
-    return container;
 }
 
 - (NSString *)description
