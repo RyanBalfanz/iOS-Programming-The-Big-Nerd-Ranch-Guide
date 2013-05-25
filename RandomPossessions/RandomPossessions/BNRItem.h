@@ -24,21 +24,11 @@
         valueInDollars:(int)value
           serialNumber:(NSString *)sNumber;
 
-- (void)setContainedItem:(BNRItem *)i;
-- (BNRItem *)containedItem;
-
-- (void)setContainer:(BNRItem *)i;
-- (BNRItem *)container;
-
-- (void)setItemName:(NSString *)str;
-- (NSString *)itemName;
-
-- (void)setSerialNumber:(NSString *)str;
-- (NSString *)serialNumber;
-
-- (void)setValueInDollars:(int)i;
-- (int)valueInDollars;
-
-- (NSDate *)dateCreated;
+@property (nonatomic) BNRItem *containedItem;
+@property (nonatomic) BNRItem *container;
+@property (nonatomic) NSString *itemName;
+@property (nonatomic) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic) NSDate *dateCreated;
 
 @end
