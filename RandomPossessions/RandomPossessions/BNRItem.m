@@ -88,4 +88,10 @@
     return descriptionString;
 }
 
+- (void)setContainedItem:(BNRItem *)i
+{
+    containedItem = i;
+    [i setContainer:self];
+}
+
 @end
