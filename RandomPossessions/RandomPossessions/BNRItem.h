@@ -24,11 +24,12 @@
         valueInDollars:(int)value
           serialNumber:(NSString *)sNumber;
 
-@property (nonatomic) BNRItem *containedItem;
-@property (nonatomic) BNRItem *container;
-@property (nonatomic) NSString *itemName;
-@property (nonatomic) NSString *serialNumber;
+@property (nonatomic, strong) BNRItem *containedItem;
+@property (nonatomic, weak) BNRItem *container;
+
+@property (nonatomic, strong) NSString *itemName;
+@property (nonatomic, strong) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
-@property (nonatomic, readonly) NSDate *dateCreated;
+@property (nonatomic, readonly, strong) NSDate *dateCreated;
 
 @end
