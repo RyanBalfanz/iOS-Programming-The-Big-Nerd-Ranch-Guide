@@ -19,9 +19,14 @@
     if (self) {
         // Create location manager object
         locationManager = [[CLLocationManager alloc] init];
+
+        // There will be a warning from this line of code; ignore it for now
+        [locationManager setDelegate:self];
+
         // And we want it to be as accurate as possible
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+
         // Tell our manager to start looking for its location immediately
         [locationManager startUpdatingLocation];
     }
