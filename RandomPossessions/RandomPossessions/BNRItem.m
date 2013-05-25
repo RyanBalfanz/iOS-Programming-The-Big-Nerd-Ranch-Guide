@@ -9,6 +9,7 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
+@synthesize itemName;
 
 + (id)randomItem
 {
@@ -73,16 +74,6 @@
     }
     
     return self;
-}
-
-- (void)setItemName:(NSString *)str
-{
-    itemName = str;
-}
-
-- (NSString *)itemName
-{
-    return itemName;
 }
 
 - (void)setSerialNumber:(NSString *)str
