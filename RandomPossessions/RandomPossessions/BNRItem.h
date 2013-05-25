@@ -15,7 +15,7 @@
     int valueInDollars;
     NSDate *dateCreated;
     BNRItem *containedItem;
-    __weak BNRItem *container;
+    __unsafe_unretained BNRItem *container;
 }
 
 + (id)randomItem;
