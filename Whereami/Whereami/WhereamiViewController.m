@@ -46,6 +46,13 @@
     NSLog(@"Could not find location: %@", error);
 }
 
+- (void)doSomethingWeird
+{
+    NSLog(@"Line 1");
+    NSLog(@"Line 2");
+    NSLog(@"Line 3");
+}
+
 - (void)dealloc
 {
     // Tell the location manager to stop sending us messages
