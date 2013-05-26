@@ -20,6 +20,8 @@
         // Create location manager object
         locationManager = [[CLLocationManager alloc] init];
 
+        [self doSomethingWeird];
+
         // There will be a warning from this line of code; ignore it for now
         [locationManager setDelegate:self];
 
